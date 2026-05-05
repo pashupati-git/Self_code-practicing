@@ -1,15 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:self_code/screens/details_page.dart';
 
 class HomeContentPage extends StatelessWidget {
   const HomeContentPage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final List<String> imgList = [
-      'assets/images/banner_1.png',
-      'assets/images/banner_2.png',
-      'assets/images/banner_3.png',
+    // List of map to hold image and title
+    final List<Map<String, String>> sliderItems = [
+      {
+        'image': 'assets/images/banner_1.png',
+        'title': 'Premium Design',
+      },
+      {
+        'image': 'assets/images/banner_2.png',
+        'title': 'Tech Innovation',
+      },
+      {
+        'image': 'assets/images/banner_3.png',
+        'title': 'Organic Growth',
+      },
     ];
 
     return Scaffold(
@@ -32,14 +43,30 @@ class HomeContentPage extends StatelessWidget {
                   autoPlayAnimationDuration: const Duration(milliseconds: 800),
                   viewportFraction: 0.8,
                 ),
-                items: imgList.map((item) => Container(
-                  margin: const EdgeInsets.all(5.0),
-                  child: ClipRRect(
-                    borderRadius: const BorderRadius.all(Radius.circular(15.0)),
-                    child: Image.asset(
-                      item,
-                      fit: BoxFit.cover,
-                      width: 1000,
+                items: sliderItems.map((item) => GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => DetailsPage(
+                          title: item['title']!,
+                          imagePath: item['image']!,
+                        ),
+                      ),
+                    );
+                  },
+                  child: Container(
+                    margin: const EdgeInsets.all(5.0),
+                    child: ClipRRect(
+                      borderRadius: const BorderRadius.all(Radius.circular(15.0)),
+                      child: Hero(
+                        tag: item['image']!,
+                        child: Image.asset(
+                          item['image']!,
+                          fit: BoxFit.cover,
+                          width: 1000,
+                        ),
+                      ),
                     ),
                   ),
                 )).toList(),
@@ -56,7 +83,7 @@ class HomeContentPage extends StatelessWidget {
               const Padding(
                 padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 10),
                 child: Text(
-                  "Welcome to your newly designed home page with an animated slider!",
+                  "Tap on any slider image above to see the new details page transition!",
                   textAlign: TextAlign.center,
                   style: TextStyle(color: Colors.grey),
                 ),
