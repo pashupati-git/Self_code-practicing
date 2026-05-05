@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 
-class HomeContentPage extends StatelessWidget {
-  const HomeContentPage({super.key});
+class SettingsPage extends StatelessWidget {
+  const SettingsPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.blue[50],
+      color: Colors.green[50],
       child: const Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(Icons.home_rounded, size: 100, color: Colors.blue),
+            Icon(Icons.settings_rounded, size: 100, color: Colors.green),
             SizedBox(height: 20),
             Text(
-              "Home Screen",
+              "Settings Screen",
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
           ],

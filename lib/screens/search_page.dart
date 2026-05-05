@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 
-class HomeContentPage extends StatelessWidget {
-  const HomeContentPage({super.key});
+class SearchPage extends StatelessWidget {
+  const SearchPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.blue[50],
+      color: Colors.purple[50],
       child: const Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(Icons.home_rounded, size: 100, color: Colors.blue),
+            Icon(Icons.search_rounded, size: 100, color: Colors.purple),
             SizedBox(height: 20),
             Text(
-              "Home Screen",
+              "Search Screen",
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
           ],
