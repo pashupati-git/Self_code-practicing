@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:self_code/screens/home.dart';
+import 'package:self_code/screens/bottom_navbar_pages/home.dart';
 
 void main(){
   runApp(const MyApp());

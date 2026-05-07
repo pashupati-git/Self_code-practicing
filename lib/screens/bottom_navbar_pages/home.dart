@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:self_code/components/bottom_nav_bar.dart';
-import 'package:self_code/screens/home_screen.dart';
-import 'package:self_code/screens/profile_page.dart';
-import 'package:self_code/screens/search_page.dart';
-import 'package:self_code/screens/settings_page.dart';
+import 'package:self_code/screens/bottom_navbar_pages/home_screen.dart';
+import 'package:self_code/screens/bottom_navbar_pages/profile_page.dart';
+import 'package:self_code/screens/bottom_navbar_pages/search_page.dart';
+import 'package:self_code/screens/bottom_navbar_pages/settings_page.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
