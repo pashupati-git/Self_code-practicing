@@ -8,6 +8,7 @@ import 'package:self_code/screens/sidebar_pages/security_page.dart';
 import 'package:self_code/screens/sidebar_pages/subscription_page.dart';
 import 'package:self_code/screens/sidebar_pages/support_page.dart';
 
+///In this screen, beautiful slider is used and each slider is linked with inner details page.
 class HomeContentPage extends StatelessWidget {
   const HomeContentPage({super.key});
 
