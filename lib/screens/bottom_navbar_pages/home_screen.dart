@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:self_code/screens/bottom_navbar_pages/details_page.dart';
-import 'package:self_code/screens/dashboard_page.dart';
-import 'package:self_code/screens/analytics_page.dart';
-import 'package:self_code/screens/rewards_page.dart';
-import 'package:self_code/screens/security_page.dart';
-import 'package:self_code/screens/subscription_page.dart';
-import 'package:self_code/screens/support_page.dart';
+import 'package:self_code/screens/sidebar_pages/dashboard_page.dart';
+import 'package:self_code/screens/sidebar_pages/analytics_page.dart';
+import 'package:self_code/screens/sidebar_pages/rewards_page.dart';
+import 'package:self_code/screens/sidebar_pages/security_page.dart';
+import 'package:self_code/screens/sidebar_pages/subscription_page.dart';
+import 'package:self_code/screens/sidebar_pages/support_page.dart';
 
 class HomeContentPage extends StatelessWidget {
   const HomeContentPage({super.key});
