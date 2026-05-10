@@ -2,6 +2,9 @@ import 'dart:isolate';
 import 'package:flutter/foundation.dart'; // For compute function
 import 'package:flutter/material.dart';
 
+///This file teaches about isolate,how big background tasks are handled -
+///     -without freezing the ui and other process.
+/// Flutter runs on a single UI thread, isolates doesnot share memory but communicates through message passing.
 class SettingsPage extends StatefulWidget {
   const SettingsPage({super.key});
 
@@ -9,7 +12,8 @@ class SettingsPage extends StatefulWidget {
   State<SettingsPage> createState() => _SettingsPageState();
 }
 
-class _SettingsPageState extends State<SettingsPage> with SingleTickerProviderStateMixin {
+class _SettingsPageState extends State<SettingsPage>
+    with SingleTickerProviderStateMixin {
   bool _isLoading = false;
   String _result = "No task running";
   late AnimationController _animationController;
@@ -57,7 +61,8 @@ class _SettingsPageState extends State<SettingsPage> with SingleTickerProviderSt
 
       setState(() {
         _isLoading = false;
-        _result = "Main Thread Result: $sum\nTime: ${end.difference(start).inMilliseconds}ms";
+        _result =
+            "Main Thread Result: $sum\nTime: ${end.difference(start).inMilliseconds}ms";
       });
     });
   }
@@ -80,7 +85,8 @@ class _SettingsPageState extends State<SettingsPage> with SingleTickerProviderSt
 
     setState(() {
       _isLoading = false;
-      _result = "Isolate Result: $sum\nTime: ${end.difference(start).inMilliseconds}ms";
+      _result =
+          "Isolate Result: $sum\nTime: ${end.difference(start).inMilliseconds}ms";
     });
   }
 
@@ -96,7 +102,11 @@ class _SettingsPageState extends State<SettingsPage> with SingleTickerProviderSt
             // --- Header Section ---
             const Text(
               "Explore Isolates",
-              style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold, color: Colors.indigo),
+              style: TextStyle(
+                fontSize: 32,
+                fontWeight: FontWeight.bold,
+                color: Colors.indigo,
+              ),
             ),
             const SizedBox(height: 10),
             const Text(
@@ -115,18 +125,30 @@ class _SettingsPageState extends State<SettingsPage> with SingleTickerProviderSt
                       width: 80,
                       height: 80,
                       decoration: BoxDecoration(
-                        gradient: const LinearGradient(colors: [Colors.indigo, Colors.purple]),
+                        gradient: const LinearGradient(
+                          colors: [Colors.indigo, Colors.purple],
+                        ),
                         borderRadius: BorderRadius.circular(15),
                         boxShadow: [
-                          BoxShadow(color: Colors.indigo.withOpacity(0.3), blurRadius: 10, offset: const Offset(0, 5))
+                          BoxShadow(
+                            color: Colors.indigo.withOpacity(0.3),
+                            blurRadius: 10,
+                            offset: const Offset(0, 5),
+                          ),
                         ],
                       ),
-                      child: const Icon(Icons.sync, color: Colors.white, size: 40),
+                      child: const Icon(
+                        Icons.sync,
+                        color: Colors.white,
+                        size: 40,
+                      ),
                     ),
                   ),
                   const SizedBox(height: 10),
-                  const Text("Watch this icon. If it stops, the UI is frozen!", 
-                    style: TextStyle(fontSize: 12, fontStyle: FontStyle.italic)),
+                  const Text(
+                    "Watch this icon. If it stops, the UI is frozen!",
+                    style: TextStyle(fontSize: 12, fontStyle: FontStyle.italic),
+                  ),
                 ],
               ),
             ),
@@ -143,7 +165,8 @@ class _SettingsPageState extends State<SettingsPage> with SingleTickerProviderSt
             // --- Main Thread Section ---
             _buildTaskCard(
               title: "Main Thread Task",
-              description: "Runs on the UI thread. Will block the event loop and freeze animations.",
+              description:
+                  "Runs on the UI thread. Will block the event loop and freeze animations.",
               buttonLabel: "Run on Main Thread",
               buttonColor: Colors.redAccent,
               onPressed: _isLoading ? null : runOnMainThread,
@@ -153,7 +176,8 @@ class _SettingsPageState extends State<SettingsPage> with SingleTickerProviderSt
             // --- Isolate Section ---
             _buildTaskCard(
               title: "Isolate Task (Worker)",
-              description: "Runs on a separate Isolate. UI stays smooth and interactive.",
+              description:
+                  "Runs on a separate Isolate. UI stays smooth and interactive.",
               buttonLabel: "Run on Isolate",
               buttonColor: Colors.green,
               onPressed: _isLoading ? null : runOnIsolate,
@@ -172,9 +196,21 @@ class _SettingsPageState extends State<SettingsPage> with SingleTickerProviderSt
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Text("Output Log", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.indigo)),
+                  const Text(
+                    "Output Log",
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Colors.indigo,
+                    ),
+                  ),
                   const Divider(),
-                  Text(_result, style: const TextStyle(fontFamily: 'monospace', fontSize: 14)),
+                  Text(
+                    _result,
+                    style: const TextStyle(
+                      fontFamily: 'monospace',
+                      fontSize: 14,
+                    ),
+                  ),
                 ],
               ),
             ),
@@ -201,7 +237,14 @@ class _SettingsPageState extends State<SettingsPage> with SingleTickerProviderSt
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(title, style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Colors.indigo)),
+                Text(
+                  title,
+                  style: const TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.indigo,
+                  ),
+                ),
                 const SizedBox(height: 5),
                 Text(content, style: const TextStyle(color: Colors.indigo)),
               ],
@@ -230,7 +273,10 @@ class _SettingsPageState extends State<SettingsPage> with SingleTickerProviderSt
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(title, style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+            Text(
+              title,
+              style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            ),
             const SizedBox(height: 5),
             Text(description, style: const TextStyle(color: Colors.grey)),
             const SizedBox(height: 20),
@@ -242,7 +288,9 @@ class _SettingsPageState extends State<SettingsPage> with SingleTickerProviderSt
                 style: ElevatedButton.styleFrom(
                   backgroundColor: buttonColor,
                   foregroundColor: Colors.white,
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12),
+                  ),
                   elevation: 0,
                 ),
                 child: Text(buttonLabel),
