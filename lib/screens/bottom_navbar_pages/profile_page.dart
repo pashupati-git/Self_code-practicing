@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:model_viewer_plus/model_viewer_plus.dart';
 
+
+///In this page , 3d model was shown which
+///can be rotated by user hand using package model_viewr_plus
+///.glb model file is required, which can be made from any software of 3d making structure.
 class ProfilePage extends StatelessWidget {
   const ProfilePage({super.key});
 

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+///In this page silver app bar is used ,silver app bar means considering whole page as appbar
+///it gives nice and statndard ui experience.
 class SearchPage extends StatelessWidget {
   const SearchPage({super.key});
 
