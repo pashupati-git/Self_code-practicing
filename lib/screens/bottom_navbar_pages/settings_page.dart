@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 ///This file teaches about isolate,how big background tasks are handled -
 ///     -without freezing the ui and other process.
 /// Flutter runs on a single UI thread, isolates doesnot share memory but communicates through message passing.
+
 class SettingsPage extends StatefulWidget {
   const SettingsPage({super.key});
 
