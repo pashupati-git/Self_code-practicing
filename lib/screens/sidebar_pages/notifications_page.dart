@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+///In this page,flutter different type of packages will be used.
+///how packages work ,detailed study will be conducted.
 class NotificationsPage extends StatelessWidget {
   const NotificationsPage({super.key});
 
