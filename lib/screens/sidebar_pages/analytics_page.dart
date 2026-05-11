@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+
+//In this page,how small animations lik eesewa (animation on icons,>) will be done.
 class AnalyticsPage extends StatelessWidget {
   const AnalyticsPage({super.key});
 
