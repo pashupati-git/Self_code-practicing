@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
 
+
+///in this page.App related terms like system behaviour, how code and anfroid systems are 
+///interacting with each other, how native performance can be made peak for both android and ios 
+///will be studied and disacussed.
+///
 class OrderHistoryPage extends StatelessWidget {
   const OrderHistoryPage({super.key});
 
