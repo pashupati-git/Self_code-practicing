@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+//In support page, AI related work will be done,how models will be insterted and many more.
 class SupportPage extends StatelessWidget {
   const SupportPage({super.key});
 
