@@ -1,5 +1,12 @@
 import 'package:flutter/material.dart';
 
+
+///In this page, how api is handled,pretty dio logger is used 
+///exception handling
+///error handling
+///diffrent types of error responses
+///differnt packages like retrofit ,dio will be compared.
+///
 class SubscriptionPage extends StatelessWidget {
   const SubscriptionPage({super.key});
 
