@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+//In this page, how security measures can be done while app making will be implemented.
 class SecurityPage extends StatelessWidget {
   const SecurityPage({super.key});
 
