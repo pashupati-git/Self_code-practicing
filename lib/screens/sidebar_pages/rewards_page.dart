@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+//In this page,flutter (conditions methods like method properties will logic writing will be implemented)
 class RewardsPage extends StatelessWidget {
   const RewardsPage({super.key});
 
