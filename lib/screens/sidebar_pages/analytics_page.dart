@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 
 
-//In this page,how small animations lik eesewa (animation on icons,>) will be done.
+///In this page,how small animations lik eesewa (animation on icons,>) will be done.
+///animations inside icons like in more icon,there will be 4 small icons inside icons
+///and that icons move in circular way.
+///
 class AnalyticsPage extends StatelessWidget {
   const AnalyticsPage({super.key});
 
