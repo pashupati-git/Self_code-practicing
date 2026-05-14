@@ -37,6 +37,8 @@ class AnalyticsPage extends StatelessWidget {
               "Analytics Data Coming Soon",
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
+           /// The `const Padding` widget in the code snippet is used to create padding around its child
+           /// widget, which in this case is a `Text` widget displaying a message.
             const Padding(
               padding: EdgeInsets.all(20.0),
               child: Text(
