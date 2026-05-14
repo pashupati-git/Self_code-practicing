@@ -6,6 +6,9 @@ import 'package:flutter/material.dart';
 ///and that icons move in circular way.
 ///
 class AnalyticsPage extends StatelessWidget {
+  /// The line `const AnalyticsPage({super.key});` in the code snippet is defining a constructor for the
+  /// `AnalyticsPage` class. In Dart, constructors are special methods used for creating instances of a
+  /// class.
   const AnalyticsPage({super.key});
 
   @override
