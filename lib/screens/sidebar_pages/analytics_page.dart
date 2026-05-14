@@ -28,6 +28,9 @@ class AnalyticsPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            /// The line `Icon(Icons.bar_chart_rounded, size: 100, color: Colors.pinkAccent[100])` in
+            /// the code snippet is creating an `Icon` widget that displays a bar chart icon with
+            /// specific size and color.
             Icon(Icons.bar_chart_rounded, size: 100, color: Colors.pinkAccent[100]),
             const SizedBox(height: 20),
             const Text(
