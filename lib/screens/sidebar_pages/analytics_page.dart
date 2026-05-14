@@ -14,6 +14,11 @@ class AnalyticsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      /// The `appBar: AppBar` in the `Scaffold` widget is specifying the app bar that will be displayed
+      /// at the top of the screen in the `AnalyticsPage`. The `AppBar` widget allows you to create a
+      /// material design app bar with various customization options such as title, background color,
+      /// foreground color, actions, etc. In this case, the app bar will have a title of 'Analytics'
+      /// with a pink accent background color and white foreground color.
       appBar: AppBar(
         title: const Text('Analytics'),
         backgroundColor: Colors.pinkAccent,
