@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:self_code/screens/bottom_navbar_pages/details_page.dart';
 import 'package:self_code/screens/sidebar_pages/dashboard_page.dart';
-import 'package:self_code/screens/sidebar_pages/analytics_page.dart';
+import 'package:self_code/screens/sidebar_pages/animation_page.dart';
 import 'package:self_code/screens/sidebar_pages/rewards_page.dart';
 import 'package:self_code/screens/sidebar_pages/security_page.dart';
 import 'package:self_code/screens/sidebar_pages/subscription_page.dart';
@@ -95,7 +95,7 @@ class HomeContentPage extends StatelessWidget {
                     onTap: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => const AnalyticsPage()),
+                        MaterialPageRoute(builder: (context) => const AnimationPage()),
                       );
                     },
                   ),
