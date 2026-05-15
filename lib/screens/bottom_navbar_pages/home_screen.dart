@@ -91,7 +91,7 @@ class HomeContentPage extends StatelessWidget {
                   ),
                   _buildDrawerItem(
                     icon: Icons.analytics_rounded,
-                    title: "Analytics",
+                    title: "Animation",
                     onTap: () {
                       Navigator.push(
                         context,
