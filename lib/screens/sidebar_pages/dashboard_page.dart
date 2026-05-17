@@ -41,6 +41,12 @@ class _DashboardPageState extends State<DashboardPage> {
     }
   }
 
+  /// The `_removeFile` function removes a file from a list of selected platform files in Dart.
+  /// 
+  /// Args:
+  ///   index (int): The `index` parameter in the `_removeFile` function represents the position of the
+  /// file that needs to be removed from the `_selectedPlatformFiles` list. It is an integer value
+  /// indicating the index of the file to be removed.
   void _removeFile(int index) {
     setState(() {
       _selectedPlatformFiles.removeAt(index);
