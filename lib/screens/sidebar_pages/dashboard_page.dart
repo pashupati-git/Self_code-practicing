@@ -18,6 +18,8 @@ class _DashboardPageState extends State<DashboardPage> {
   List<PlatformFile> _selectedPlatformFiles = [];
 
   Future<void> _pickFiles() async {
+    /// This block of code is handling the file picking process in the `_pickFiles` method. Here's a
+    /// breakdown of what it does:
     try {
       FilePickerResult? result = await FilePicker.pickFiles(
         allowMultiple: true,
