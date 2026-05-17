@@ -199,6 +199,20 @@ class _DashboardPageState extends State<DashboardPage> {
     );
   }
 
+  /// The function `_buildFilePreview` displays a file preview as an image in a Flutter app, handling
+  /// different platforms appropriately.
+  /// 
+  /// Args:
+  ///   file (PlatformFile): The `file` parameter in the `_buildFilePreview` method is of type
+  /// `PlatformFile`. It contains information about a file, such as its path and bytes. The method uses
+  /// this parameter to determine whether to display the file as an image on the web or from a local
+  /// file.
+  /// 
+  /// Returns:
+  ///   The `_buildFilePreview` function returns an `Image` widget displaying the preview of the file.
+  /// If the platform is web (kIsWeb), it returns an `Image.memory` widget using the file bytes.
+  /// Otherwise, it returns an `Image.file` widget using the file path. Both widgets have `fit:
+  /// BoxFit.cover` and occupy the full width and height of the parent container.
   Widget _buildFilePreview(PlatformFile file) {
     if (kIsWeb) {
       return Image.memory(file.bytes!, fit: BoxFit.cover, width: double.infinity, height: double.infinity);
