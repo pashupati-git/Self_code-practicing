@@ -5,6 +5,7 @@ import 'package:file_picker/file_picker.dart';
 
 
 //In this file advance file_picker package is used , it helps to pick files from mobile
+//File picker is better than image picker
 class DashboardPage extends StatefulWidget {
   const DashboardPage({super.key});
 
